@@ -1,0 +1,21 @@
+@use "../partials/typography";
+@use "../partials/palette";
+
+.btn {
+  background-color: palette.$hero-bg-color;
+  color: palette.$standout-font-color;
+  padding: 10px;
+  border: 2px solid palette.$standout-font-color;
+  border-radius: 3px;
+
+  font-size: typography.$tertiary-font-size;
+  font-family: typography.$primary-font-family;
+
+  &--medium {
+    padding: 15px 30px;
+  }
+
+  &--large {
+    padding: 30px;
+  }
+}
