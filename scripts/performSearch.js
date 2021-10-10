@@ -3,7 +3,6 @@ import { attachCards } from "./attachCards.js";
 import { getBooks } from "./getBooks.js";
 
 export const performSearch = async () => {
-
     console.log("hi form me")
 
     // get the search terms from the dom
@@ -22,12 +21,12 @@ export const performSearch = async () => {
     const books = await getBooks(searchTerms);
     console.log("books", books);
 
-    //   create cards
+    // //   create cards
     const bookCards = createCards(books);
-    console.log("bookCards", bookCards);
+    // console.log("bookCards", bookCards);
 
-    //   attach cards to DOM
-    attachCards(bookCards);
+    // //   attach cards to DOM
+    const newCards = attachCards(bookCards);
     
-    return;
+    return newCards;
 };

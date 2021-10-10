@@ -1,8 +1,13 @@
+@use "../partials/palette.scss";
+@use "../partials/typography.scss";
+
 header {
   margin: 0;
   height: 40px;
-  background-color: grayscale($color: #757575);
-  color: rgb(255, 255, 255);
+  background-color: palette.$secondary-bg-color;
+  color: palette.$secondary-font-color;
+  font-family: typography.$tertiary-font-family; 
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;

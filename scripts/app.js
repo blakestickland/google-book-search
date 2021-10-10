@@ -1,17 +1,19 @@
 "use strict";
 import { performSearch } from "./performSearch.js";
 
-// // getBooks.js
-// const getBooks = async (searchTerms) => {
-//   const GOOGLE_BOOKS_API = "https://www.googleapis.com/books/v1/volumes";
-//   const QUERY = `?q=${searchTerms}`;
-//   const response = await fetch(`${GOOGLE_BOOKS_API}${QUERY}`);
-//   const data = await response.json();
-//   console.log(data);
-
-//   return data.items;
-// };
-
 // performSearch.js
-    const searchBtn = document.querySelector("#searchBtn");
-    searchBtn.addEventListener("click", performSearch);
+// by clicking on Search button
+const searchBtn = document.querySelector("#searchBtn");
+searchBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  performSearch();
+});
+
+// or by pressing the 'return' key
+const inputListener = document.querySelector("#gSearch");
+inputListener.addEventListener("keyup", (event) => {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    performSearch();
+  }
+}); 

@@ -3,6 +3,8 @@
 @use "./modules/header.scss";
 @use "./modules/search-box.scss";
 
+@use "./partials/palette.scss";
+
 * {
   box-sizing: border-box;
 }
@@ -11,12 +13,13 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
+
+    background-color: palette.$primary-bg-color;
+    color: palette.$primary-font-color;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  // flex-wrap: wrap;
-  // justify-content: center;
   align-items: center;
 }
