@@ -8,10 +8,12 @@ let searchTerm = `dodo birds`;
 const URI_EXTENSION_SEARCH = `?q=${searchTerm}`;
 
 
-const button = document.querySelector("#searchBtn");
+const button = document.getElementsByClassName("searchBtn");
+console.log(button);
 button.addEventListener("click", async (event) => {
+  event.preventDefault();
+  
   // get the search terms from the dom
-
   const input = document.querySelector("#searchTerms");
   const searchTerms = input.value.trim().toLowerCase();
 
@@ -23,6 +25,8 @@ button.addEventListener("click", async (event) => {
   console.log(searchTerm);
 
 const getBooks = async () => {
+  event.preventDefault();
+
   const response = await fetch(
     `${GOOGLE_BOOKS_API}${URI_EXTENSION_SEARCH}`
     );
@@ -65,4 +69,4 @@ console.log(books);
 //   }
 //   const append = (parent) => (child) => parent.appendChild(child);
 //   listItems.forEach(append(list));
-// });
+});

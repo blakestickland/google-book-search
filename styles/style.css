@@ -1,17 +1,113 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-.container {
+/* Hero Color */
+/* Text Color */
+/* Spare Color */
+.card {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  background-color: #fcfcfc;
+  border: 1px solid #dddbdb;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 100%;
+  padding-left: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+@media only screen and (max-width: 576px) {
+  .card {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .card {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .card {
+    font-size: small;
+  }
+}
+.card--top {
+  display: flex;
+  flex-direction: row;
+}
+.card--top__image {
+  width: fit-content;
+}
+.card--top__body {
+  width: 100%;
+  padding-left: 20px;
+}
+.card--top__body h2, .card--top__body p {
+  margin: 0;
+}
+.card--top__body--title {
+  color: #849EE0;
+}
+.card--top__body--authors {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.card--top__body--publication-year {
+  margin-top: 5px;
+  font-size: 14px;
+}
+.card--top__body--type {
+  margin-top: 10px;
+  font-style: italic;
+}
+.card--bottom {
+  width: 100%;
+  padding-left: 20px;
+}
+.card--bottom--description {
+  font-family: "Times New Roman", Times, serif;
+}
+.card--bottom--details-link {
+  text-align: right;
+  font-weight: bold;
+}
+.card--bottom--details-link p {
+  margin-bottom: 0;
 }
 
-p {
-  margin: 0;
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card-wrapper {
+  background-color: #fff;
+  color: #444;
+  justify-content: center;
+  width: 1020px;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 576px) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+    width: 450px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .card-wrapper {
+    grid-template-columns: 1fr 1fr;
+    width: 730px;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1164px) {
+  .card-wrapper {
+    width: 850px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 header {
@@ -20,43 +116,34 @@ header {
   background-color: #757575;
   color: white;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
   padding: 10px 20px;
 }
 
-.parallax {
-  /* The image used */
-  background-image: url("../images/la-trobe-reading-room.jpeg");
-  /* Full height */
-  height: 100%;
-  /* Set a specific height */
-  min-height: 500px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Place text in the middle of the image */
-.hero-text {
+.search-box {
   height: fit-content;
   background-color: aliceblue;
+  margin-top: 30px;
   padding: 20px;
   border: 2px solid grey;
   border-radius: 10px;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: #635a5a;
 }
 
-/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
