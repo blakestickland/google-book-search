@@ -1,4 +1,4 @@
-export const attachCards = (listItems) => {
+export const attachCards = (card) => {
   // attach those li elements to my ul
   // check if li are present first and remove
   const list = document.querySelector("#results-list");
@@ -6,5 +6,5 @@ export const attachCards = (listItems) => {
     list.removeChild(list.lastChild);
   }
   const append = (parent) => (child) => parent.appendChild(child);
-  listItems.forEach(append(list));
+  card.forEach(append(list));
 }

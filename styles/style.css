@@ -33,7 +33,8 @@
   flex-direction: row;
 }
 .card--top__image {
-  width: fit-content;
+  width: 128px;
+  height: 190px;
 }
 .card--top__body {
   width: 100%;
