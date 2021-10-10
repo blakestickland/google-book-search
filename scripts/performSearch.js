@@ -3,7 +3,6 @@ import { attachCards } from "./attachCards.js";
 import { getBooks } from "./getBooks.js";
 
 export const performSearch = async () => {
-
     console.log("hi form me")
 
     // get the search terms from the dom
