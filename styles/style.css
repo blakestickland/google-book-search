@@ -1,11 +1,11 @@
-/* Hero Color */
-/* Text Color */
-/* Spare Color */
+/* Background Colors */
+/* Text Colors */
+/* Highlight Color */
 .card {
   display: flex;
   flex-direction: column;
-  background-color: #fcfcfc;
-  border: 1px solid #dddbdb;
+  background-color: #f1f5db;
+  border: 0.5px solid #c4c3c3;
   border-radius: 15px;
   padding: 20px;
   font-size: 100%;
@@ -44,7 +44,7 @@
   margin: 0;
 }
 .card--top__body--title {
-  color: #849EE0;
+  color: #F67B1C;
 }
 .card--top__body--authors {
   margin-top: 10px;
@@ -86,7 +86,7 @@
 }
 
 .card-wrapper {
-  background-color: #fff;
+  background-color: #9AD5D3;
   color: #444;
   justify-content: center;
   width: 1020px;
@@ -120,8 +120,10 @@
 header {
   margin: 0;
   height: 40px;
-  background-color: #757575;
-  color: white;
+  background-color: #57CCE7;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,13 +132,13 @@ header {
 
 .search-box {
   height: fit-content;
-  background-color: aliceblue;
+  background-color: #f1f5db;
+  color: #202020;
   margin-top: 30px;
   padding: 20px;
-  border: 2px solid grey;
+  border: 2px solid gray;
   border-radius: 10px;
   text-align: center;
-  color: #635a5a;
 }
 
 * {
@@ -147,6 +149,8 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
+  background-color: #9AD5D3;
+  color: #202020;
 }
 
 .container {

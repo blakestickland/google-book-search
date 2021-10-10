@@ -1,5 +1,6 @@
 @use "../partials/breakpoints";
 @use "../partials/devices";
+@use "../partials/palette";
 
 %wrapper-layout {
   display: grid;
@@ -9,7 +10,7 @@
 
 .card-wrapper {
   @extend %wrapper-layout;
-  background-color: #fff;
+  background-color: palette.$primary-bg-color;
   color: #444;
 
   justify-content: center;
