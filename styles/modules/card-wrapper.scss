@@ -1,0 +1,40 @@
+@use "../partials/breakpoints";
+@use "../partials/devices";
+
+%wrapper-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.card-wrapper {
+  @extend %wrapper-layout;
+  background-color: #fff;
+  color: #444;
+
+  justify-content: center;
+
+  width: 1020px;
+  margin-top: 30px;
+  
+  @include devices.phone {
+      grid-template-columns: 1fr;
+      width: 320px;
+  }
+  
+  @include devices.tablet {
+      grid-template-columns: 1fr;
+      width: 450px;
+  }
+  
+  @include devices.landscape-tablet {
+      grid-template-columns: 1fr 1fr;
+      width: 730px;
+  }
+  
+  @include devices.laptop {
+      width: 850px;
+      grid-template-columns: 1fr 1fr;
+  }
+
+}

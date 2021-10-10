@@ -6,24 +6,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Google Books Search</title>
-    <script src="./scripts/app.js"></script>
 </head>
 <body>
-    <div class="parallax">
-        <header>
-            <p>A place to search the Books available via Google Books.</p>
-            <nav></nav>
-        </header>
-        <div class="container">
-            <div class="hero-text">
-                <h1>Google Books Search</h1>
-                <p>Use this to find good reads.</p>
-                <label for="gsearch">Search Google Books:</label>
-                <input type="search" id="gsearch" name="gsearch">
-                <input type="button" value="Search">
-                <div id="results-list"></div>
+    <header>
+        <p>A place to search the Books available via Google Books.</p>
+    </header>
+    <div class="container">
+        <div class="search-box">
+            <h1>Google Books Search</h1>
+            <p>Use this to find good reads.</p>
+            <input type="search" id="gSearch" name="gsearch" placeholder="Search Google Books"/>
+            <button class="button" id="searchBtn">SEARCH</button>
+            <!-- <input type="button" value="Search"> -->
+            <div id="results-list"></div>
+        </div>
+        <div class="card-wrapper">
+            <!-- <div class="card">
+                <div class="card--top">
+                    <div class="card--top__image">
+                        <img src="https://via.placeholder.com/90x120" alt="book cover">
+                    </div>
+                    <div class="card--top__body">
+                        <div class="card--top__body--title">
+                            <h2>Enterprise web development: building HTML5 appications : from desktop to mobile</h2>
+                        </div>
+                        <div class="card--top__body--authors">
+                            <p>Fain, Yakov</p>
+                        </div>
+                        <div class="card--top__body--publication-year">
+                            <p>2014</p>
+                        </div>
+                        <div class="card--top__body--type">
+                            <p>Books, Manuscripts</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--bottom">
+                    <div class="card--bottom--description">
+                        <p>organization’s next web application with HTML5, this practical book will help you sort through the various frameworks, libraries, and development options that populate this stack. You’ll learn several of these...</p>
+                    </div>
+                    <div class="card--bottom--details-link">
+                        <p>View more details ></p>
+                    </div>
+                </div>
             </div>
+            <div class="card">
+                <div class="card--top">
+                    <div class="card--top__image">
+                        <img src="https://via.placeholder.com/90x120" alt="book cover">
+                    </div>
+                    <div class="card--top__body">
+                        <div class="card--top__body--title">
+                            <h2>Enterprise web development: building HTML5 appications : from desktop to mobile</h2>
+                        </div>
+                        <div class="card--top__body--authors">
+                            <p>Fain, Yakov</p>
+                        </div>
+                        <div class="card--top__body--publication-year">
+                            <p>2014</p>
+                        </div>
+                        <div class="card--top__body--type">
+                            <p>Books, Manuscripts</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--bottom">
+                    <div class="card--bottom--description">
+                        <p>organization’s next web application with HTML5, this practical book will help you sort through the various frameworks, libraries, and development options that populate this stack. You’ll learn several of these...</p>
+                    </div>
+                    <div class="card--bottom--details-link">
+                        <p>View more details ></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card--top">
+                    <div class="card--top__image">
+                        <img src="https://via.placeholder.com/90x120" alt="book cover">
+                    </div>
+                    <div class="card--top__body">
+                        <div class="card--top__body--title">
+                            <h2>Enterprise web development: building HTML5 appications : from desktop to mobile</h2>
+                        </div>
+                        <div class="card--top__body--authors">
+                            <p>Fain, Yakov</p>
+                        </div>
+                        <div class="card--top__body--publication-year">
+                            <p>2014</p>
+                        </div>
+                        <div class="card--top__body--type">
+                            <p>Books, Manuscripts</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card--bottom">
+                    <div class="card--bottom--description">
+                        <p>organization’s next web application with HTML5, this practical book will help you sort through the various frameworks, libraries, and development options that populate this stack. You’ll learn several of these...</p>
+                    </div>
+                    <div class="card--bottom--details-link">
+                        <p>View more details ></p>
+                    </div>
+                </div>
+            </div> -->
+            <!-- <div class="card">
+                <img src="https://via.placeholder.com/150" alt="book cover">
+                <div class="card__container card--center">
+                    <p>Alps</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="book cover">
+                <div class="card__container card--center">
+                    <p>The Italian / Austrian Alps  Italian / Austrian Alps</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="book cover">
+                <div class="card__container card--center">
+                    <p>T</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="book cover">
+                <div class="card__container card--center">
+                    <p>The Italian / Austrian Alps</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="book cover">
+                <div class="card__container card--center">
+                    <p>The Italian / Austrian Alps</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/150" alt="book cover">
+                <div class="card__container card--center">
+                    <p>The Italian / Austrian Alps</p>
+                </div>
+            </div> -->
         </div>
     </div>
 </body>
+<script type="module" src="./scripts/getBooks.js"></script>
+<script type="module" src="./scripts/createCards.js"></script>
+<script type="module" src="./scripts/attachCards.js"></script>
+<script type="module" src="./scripts/performSearch.js"></script>
+<script  type="module" src="./scripts/app.js" defer></script>
 </html>
