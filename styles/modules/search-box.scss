@@ -1,10 +1,13 @@
+@use "../partials/palette.scss";
+@use "../partials/typography.scss";
+
 .search-box {
   height: fit-content;
-  background-color: aliceblue;
+  background-color: palette.$text-bg-color;
+  color: palette.$primary-font-color;
   margin-top: 30px;
   padding: 20px;
-  border: 2px solid grey;
+  border: 2px solid rgb(128, 128, 128);
   border-radius: 10px;
   text-align: center;
-  color: rgb(99, 90, 90);
 }
