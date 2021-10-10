@@ -1,6 +1,6 @@
 HTML:
 
-Input (search terms from user in it) s
+Input (search terms from user in it) 
 submit button (click after user pops in search terms. 
 <div> grid of books
 Script tags at bottom of html
