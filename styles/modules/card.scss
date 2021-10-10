@@ -78,12 +78,19 @@
     
     &--bottom {
         width: 100%;
+        margin-top: 10px;
         padding-left: 20px;
         
         &--description {
             font-family:'Times New Roman', Times, serif;
+            overflow: hidden;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
         }
         &--details-link {
+            align-items:center;
             text-align: right;
             font-weight: bold;
             p {

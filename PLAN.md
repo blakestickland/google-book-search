@@ -1,15 +1,15 @@
 HTML:
 
-Input (search terms from user in it) 
-submit button (click after user pops in search terms. 
-<div> grid of books
-Script tags at bottom of html
+Input (search terms from user in it) YES
+submit button (click after user pops in search terms. YES
+<div> grid of books YES
+Script tags at bottom of html YES
 
 
 JAVASCRIPT:
 
-Const API URL
-Function to receive string input (search value by user)
+Const API URL YES
+Function to receive string input (search value by user) YES
 Event click >1. Alert (if no input) 2. (inside event listener) call specified fetch
 Variable for Book titles
 Variable for Authors
