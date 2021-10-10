@@ -71,7 +71,7 @@ export const createCards = (books) => {
     // create card Publication Year text
     const pubYearEl = document.createElement("p");
     pubYearEl.classList.add("publication-year");
-    const pubYear = book.volumeInfo.publishedDate;
+    const pubYear = book.volumeInfo.publishedDate.slice(0, 4);
     const pubYearNode = document.createTextNode(`${pubYear}`);
     pubYearEl.appendChild(pubYearNode);
 
