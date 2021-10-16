@@ -1,6 +1,9 @@
 // import { attachCards } from "./attachCards.js";
 import { createElementAddClass } from "./createElementAddClass.js";
 import { createElementWithText } from "./createElementWithText.js";
+import { createElementWithClassId } from "./createElementWithClassId.js";
+import { createElementWithClassIdText } from "./createElementWithClassIdText.js";
+import { createElementAddText } from "./createElementAddText.js";
 
 export const createCards = (books) => {
   // create cards for each book
@@ -27,7 +30,6 @@ export const createCards = (books) => {
 
       // attach img to parent div
       cardTop.appendChild(cardImg);
-
 
     details.appendChild(
       createElementWithText(
@@ -67,9 +69,67 @@ export const createCards = (books) => {
         book.volumeInfo.description
           ? book.volumeInfo.description
           : "No description provided.",
-        "card__description"
+          "card__description"
       )
     );
+
+    const openModalBtn = createElementWithClassIdText(
+      "button",
+      "modalBtn",
+      `modalBtn-${book.id}`,
+      "View more details >"
+    );
+    openModalBtn.setAttribute("data-modal-target", `#modal-${book.id}`);
+    // create open modal button
+    card.appendChild(openModalBtn);
+    
+    const modalDiv = createElementWithClassId(
+      "div",
+      "modal",
+      `modal-${book.id}`
+    );
+    const modalContent = createElementAddClass(
+      "div",
+      "modal-content"
+    );
+    const modalHeader = createElementAddClass(
+      "div",
+      "modal-header"
+    );
+    const modalBody = createElementAddClass(
+      "div",
+      "modal-body"
+    );
+
+    const closeBtn = createElementWithText(
+      "span",
+      "&times;",
+      "closeBtn"
+    );
+    closeBtn.setAttribute("data-close-button", "");
+    
+    modalHeader.appendChild(closeBtn);
+    modalHeader.appendChild(
+      createElementAddText(
+        "h2",
+        `${book.volumeInfo.title}`
+      )
+    );
+
+    modalBody.appendChild(
+      createElementAddText(
+        "p", 
+        `${book.volumeInfo.description}`
+      )
+    );
+      
+    // glue the modal elements together
+    modalContent.appendChild(modalHeader);
+    modalContent.appendChild(modalBody);
+    modalDiv.appendChild(modalContent);
+    card.appendChild(modalDiv);
+
+
     return card;
   });
   

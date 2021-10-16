@@ -3,7 +3,8 @@ export const createElementWithText = (element, text, className) => {
     //     throw new Error ("All three arguments must be strings.");
     // }
     const newElem = document.createElement(element);
-    newElem.classList.add(className);
+    // newElem.classList.add(className);
+    newElem.setAttribute("class", `${className}`);
     const newText = document.createTextNode(text);
     newElem.appendChild(newText);
     return newElem;

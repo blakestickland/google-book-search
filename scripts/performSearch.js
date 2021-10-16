@@ -1,6 +1,7 @@
 import { createCards } from "./createCards.js";
 import { attachCards } from "./attachCards.js";
 import { getBooks } from "./getBooks.js";
+import { modalEvents } from "./modalEvents.js";
 
 export const performSearch = async () => {
     console.log("hi form me")
@@ -27,6 +28,9 @@ export const performSearch = async () => {
 
     // //   attach cards to DOM
     const newCards = attachCards(bookCards);
+
+    // // attach event listeners to buttons for modals
+    modalEvents(books);
     
     return newCards;
 };

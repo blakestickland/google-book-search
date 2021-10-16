@@ -1,12 +1,12 @@
 @use "../partials/typography";
 @use "../partials/palette";
 
-.btn {
-  background-color: palette.$hero-bg-color;
-  color: palette.$standout-font-color;
+.button {
+  background-color: palette.$highlight-color;
+  color: palette.$secondary-font-color;
   padding: 10px;
   border: 2px solid palette.$standout-font-color;
-  border-radius: 3px;
+  border-radius: 8px;
 
   font-size: typography.$tertiary-font-size;
   font-family: typography.$primary-font-family;
@@ -19,4 +19,8 @@
     padding: 30px;
   }
 
+}
+
+.button:hover{
+  background-color: #333;
 }
