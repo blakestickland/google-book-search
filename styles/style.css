@@ -3,7 +3,9 @@
 /* Highlight Color */
 .card {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  width: 350px;
+  min-width: fit-content;
   background-color: #f1f5db;
   border: 0.5px solid #c4c3c3;
   border-radius: 15px;
@@ -30,52 +32,44 @@
 }
 .card--top {
   display: flex;
-  flex-direction: row;
 }
-.card--top__image {
-  width: 128px;
-  height: 190px;
-}
-.card--top__body {
+.card--top__details {
   width: 100%;
-  padding-left: 20px;
+  padding: 0 20px;
 }
-.card--top__body h2, .card--top__body p {
+.card--top__details__title {
+  color: #F67B1C;
+  font-size: 20px;
   margin: 0;
 }
-.card--top__body--title {
-  color: #F67B1C;
-}
-.card--top__body--authors {
+.card--top__details__authors {
   margin-top: 10px;
   font-size: 14px;
 }
-.card--top__body--publication-year {
+.card--top__details__publication-year {
   margin-top: 5px;
   font-size: 14px;
 }
-.card--top__body--type {
-  margin-top: 10px;
-  font-style: italic;
-}
-.card--bottom {
+.card__description {
   width: 100%;
-  margin-top: 10px;
+  height: fit-content;
+  margin-top: 20px;
   padding-left: 20px;
-}
-.card--bottom--description {
   font-family: "Times New Roman", Times, serif;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.card--bottom--details-link {
+.card__details-link {
+  width: 100%;
+  margin-top: 10px;
+  padding-left: 20px;
   align-items: center;
   text-align: right;
   font-weight: bold;
 }
-.card--bottom--details-link p {
+.card__details-link p {
   margin-bottom: 0;
 }
 
