@@ -65,10 +65,11 @@ export const modalEvents = (books) => {
     
     // Function to close modal if outside click
     function clickOutside() {
-        const modal = document.querySelectorAll(".modal");
-        if(event.target === modal) {
-            modal.forEach( e => e.style.display = "none");
-        }
+        console.log("clicked outside has run")
+        // const modal = document.querySelectorAll(".modal");
+        // if(event.target === modal) {
+        //     modal.forEach( e => e.style.display = "none");
+        // }
     }
 
   function openModal(modal) {

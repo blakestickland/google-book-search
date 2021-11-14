@@ -75,9 +75,9 @@ export const createCards = (books) => {
 
     const openModalBtn = createElementWithClassIdText(
       "button",
-      "modalBtn",
+      ("modalBtn", "button"),
       `modalBtn-${book.id}`,
-      "View more details >"
+      "View longer description >"
     );
     openModalBtn.setAttribute("data-modal-target", `#modal-${book.id}`);
     // create open modal button
@@ -101,25 +101,29 @@ export const createCards = (books) => {
       "modal-body"
     );
 
-    const closeBtn = createElementWithText(
+    const closeBtn = createElementAddClass(
       "span",
-      "&times;",
       "closeBtn"
     );
+    closeBtn.insertAdjacentHTML("afterbegin", "&times;");
     closeBtn.setAttribute("data-close-button", "");
     
     modalHeader.appendChild(closeBtn);
     modalHeader.appendChild(
       createElementAddText(
         "h2",
-        `${book.volumeInfo.title}`
+        book.volumeInfo.title 
+          // ? book.volumeInfo.title 
+          // : "No title provided."
       )
     );
 
     modalBody.appendChild(
       createElementAddText(
-        "p", 
-        `${book.volumeInfo.description}`
+        "p",
+        book.volumeInfo.description
+          // ? book.volumeInfo.description
+          // : "No description provided."
       )
     );
       

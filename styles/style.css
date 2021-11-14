@@ -33,6 +33,10 @@
 .card--top {
   display: flex;
 }
+.card--top__thumbnail {
+  width: 128px;
+  max-height: 190px;
+}
 .card--top__details {
   width: 100%;
   padding: 0 20px;
